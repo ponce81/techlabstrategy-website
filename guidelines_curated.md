@@ -117,9 +117,10 @@ The website should support three languages:
 
 ## 10. Visual Identity
 
-- **Style direction:** Clean & corporate — traditional consulting look, structured, conveys trust and stability.
-- **Color palette (rough idea, not final):** Navy blue as primary, with grey/silver accents.
-- **Logo:** not yet finalized — no existing asset to carry over.
+- **Style direction:** Bold, innovative, tech-savvy — dark-mode UI with an electric accent, moving away from the earlier "clean & corporate" direction.
+- **Color palette:** Near-black navy background (`#090c14`), light text, electric cyan accent (`#00e5ff`) paired with a violet secondary (`#7c5cff`) used in gradients (buttons, borders, footer accent line, logo mark).
+- **Typography accents:** Monospace font used for eyebrows/labels, phase numbers, and role years to reinforce the tech feel; bold/tight-tracked headings.
+- **Logo:** simple wordmark + abstract mark icon (SVG), styled in the new dark/gradient palette — not a final designed logo, but a placeholder in the new visual direction.
 
 ## 11. Sitemap (Launch Scope)
 
