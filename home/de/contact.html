@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | TechStrategyLab</title>
+  <meta name="description" content="Nehmen Sie Kontakt mit TechStrategyLab auf — kein Verkaufsgespräch, nur ein direkter Austausch.">
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="../assets/img/logo.svg" alt="TechStrategyLab Logo">
+        TechStrategyLab
+      </a>
+      <button class="nav-toggle" aria-label="Navigation umschalten">&#9776;</button>
+      <nav class="main-nav">
+        <a href="index.html">Start</a>
+        <a href="services.html">Leistungen</a>
+        <a href="framework.html">Fractional-CTO-Framework</a>
+        <a href="about.html">Über uns</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html" class="nav-cta active">Kontakt aufnehmen</a>
+        <div class="lang-switch">
+          <a href="../en/contact.html">EN</a>
+          <a href="contact.html" class="active">DE</a>
+          <a href="../es/contact.html">ES</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow" style="color:#c9d2dc;">Kontakt</span>
+      <h1>Lassen Sie uns sprechen — kein Pitch, nur ein Gespräch.</h1>
+      <p>Erzählen Sie uns, wo es hakt. Wir hören zu, machen uns Notizen und finden gemeinsam heraus, ob — und wie — wir helfen können.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2>Nachricht senden</h2>
+          <!-- TODO: Formular-Action unten vor dem Launch durch einen echten, statik-freundlichen Endpunkt ersetzen (z. B. Formspree, AWS Lambda + API Gateway). -->
+          <form action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Unternehmen (optional)</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+              <label for="message">Was beschäftigt Sie?</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Nachricht senden</button>
+            <p class="form-note">Wir antworten in der Regel innerhalb von ein bis zwei Werktagen.</p>
+          </form>
+        </div>
+        <div>
+          <h2>Direktkontakt</h2>
+          <div class="contact-detail">
+            <span class="label">E-Mail</span>
+            <a href="mailto:hello@techstrategylab.io">hello@techstrategylab.io</a>
+          </div>
+          <div class="contact-detail">
+            <span class="label">Standort</span>
+            <span>Europa &middot; tätig in der gesamten Region, remote-freundlich</span>
+          </div>
+          <div class="contact-detail">
+            <span class="label">Reaktionszeit</span>
+            <span>1&ndash;2 Werktage</span>
+          </div>
+          <p class="text-muted" style="margin-top:2rem;">Noch nicht sicher, worum es gehen soll? Kein Problem — die meisten ersten Gespräche beginnen genau so.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo"><img src="../assets/img/logo.svg" alt="TechStrategyLab Logo">TechStrategyLab</div>
+          <p style="margin-top:12px;font-size:0.9rem;">Pragmatische IT-Beratung und KI-Strategie für Startups, wachsende Unternehmen und Konzerne in ganz Europa.</p>
+        </div>
+        <div class="footer-nav">
+          <div>
+            <h4>Seite</h4>
+            <ul>
+              <li><a href="index.html">Start</a></li>
+              <li><a href="services.html">Leistungen</a></li>
+              <li><a href="framework.html">Fractional-CTO-Framework</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="blog.html">Insights</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Sprache</h4>
+            <ul>
+              <li><a href="../en/contact.html">English</a></li>
+              <li><a href="contact.html">Deutsch</a></li>
+              <li><a href="../es/contact.html">Español</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TechStrategyLab. Alle Rechte vorbehalten.</span>
+        <span>techstrategylab.io</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
