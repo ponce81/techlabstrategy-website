@@ -1,0 +1,39 @@
+name: Deploy to S3 on merge to master
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  id-token: write # required for OIDC auth to AWS
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # -----------------------------------------------------------
+    # --- Optional build step (skip if you have nothing to build) ---
+    # ---- name: Setup Node
+    # ---  uses: actions/setup-node@v4
+    # ---  with:
+    # ---    node-version: '20'
+
+    # ---- name: Install & build
+    # ---  run: |
+    # ---    npm ci
+    # ---    npm run build
+    # -----------------------------------------------------------
+
+    - name: Configure AWS credentials (OIDC, no stored keys)
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::390402561376:role/github_deploy_s3
+        aws-region: eu-central-1
+
+    - name: Sync to S3
+      run: |
+        aws s3 sync ./home s3://techstrategylab.website  --delete
