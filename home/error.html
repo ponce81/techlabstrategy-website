@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStrategyLab | Page not found</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.svg" alt="TechStrategyLab logo">
+        TechStrategyLab
+      </a>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:60vh;display:flex;align-items:center;">
+    <div class="container text-center">
+      <span class="eyebrow" id="err-eyebrow" style="justify-content:center;">Error</span>
+      <h1 id="err-title">Something went wrong.</h1>
+      <p class="lead" id="err-body" style="margin-left:auto;margin-right:auto;">The page you're looking for might have been moved, renamed, or doesn't exist. Let's get you back on track.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a id="err-cta" href="en/index.html" class="btn btn-primary">Back to homepage</a>
+      </div>
+      <div class="lang-switch" id="err-lang-switch" style="justify-content:center;margin-top:32px;">
+        <button type="button" data-lang="en" class="lang-btn">EN</button>
+        <button type="button" data-lang="de" class="lang-btn">DE</button>
+        <button type="button" data-lang="es" class="lang-btn">ES</button>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 2px 4px;
+    }
+    .lang-btn.active {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    var copy = {
+      en: {
+        eyebrow: "Error",
+        title: "Something went wrong.",
+        body: "The page you're looking for might have been moved, renamed, or doesn't exist. Let's get you back on track.",
+        cta: "Back to homepage",
+        href: "en/index.html"
+      },
+      de: {
+        eyebrow: "Fehler",
+        title: "Etwas ist schiefgelaufen.",
+        body: "Die gesuchte Seite wurde möglicherweise verschoben, umbenannt oder existiert nicht mehr. Wir bringen Sie zurück auf Kurs.",
+        cta: "Zur Startseite",
+        href: "de/index.html"
+      },
+      es: {
+        eyebrow: "Error",
+        title: "Algo salió mal.",
+        body: "Es posible que la página que buscas se haya movido, cambiado de nombre o ya no exista. Volvamos al camino correcto.",
+        cta: "Volver al inicio",
+        href: "es/index.html"
+      }
+    };
+
+    function setLang(lang) {
+      var c = copy[lang] || copy.en;
+      document.getElementById("err-eyebrow").textContent = c.eyebrow;
+      document.getElementById("err-title").textContent = c.title;
+      document.getElementById("err-body").textContent = c.body;
+      var cta = document.getElementById("err-cta");
+      cta.textContent = c.cta;
+      cta.setAttribute("href", c.href);
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll(".lang-btn").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+      });
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setLang(btn.getAttribute("data-lang"));
+      });
+    });
+
+    (function () {
+      var browserLang = (navigator.language || navigator.userLanguage || "en").slice(0, 2).toLowerCase();
+      var supported = ["en", "de", "es"];
+      setLang(supported.indexOf(browserLang) !== -1 ? browserLang : "en");
+    })();
+  </script>
+
+</body>
+</html>

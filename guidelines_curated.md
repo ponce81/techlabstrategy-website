@@ -141,6 +141,7 @@ The website should support three languages:
 - **Hosting:** AWS S3 bucket, static website hosting.
 - Implication: the site should be built as a **static site** (e.g., static HTML/CSS/JS output, or a static-site generator/framework that exports fully static assets — no server-side rendering or backend runtime). Any contact form or dynamic behavior will need a static-friendly approach (e.g., a third-party form service, or a separate Lambda/API Gateway endpoint if custom backend logic is ever needed).
 - Multi-language (EN/DE/ES) routing needs to work within a static-hosting setup (e.g., static paths per language such as `/en/`, `/de/`, `/es/`).
+- `error.html` at the site root is the configured S3 static-website error document — a single page (language auto-detected client-side, matching the root redirect page's approach) since S3 only supports one error document per bucket.
 
 ## 14. Open Items for Later
 
