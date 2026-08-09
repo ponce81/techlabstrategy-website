@@ -1,0 +1,13 @@
+<svg width="360" height="64" viewBox="0 0 360 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: rounded badge with ascending 3-node path (Audit -> Strategy -> Scale) -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#0F2A4A"/>
+  <polyline points="16,46 30,34 46,18" fill="none" stroke="#2DD4BF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="46" r="4" fill="#FFFFFF"/>
+  <circle cx="30" cy="34" r="4" fill="#FFFFFF"/>
+  <circle cx="46" cy="18" r="5.5" fill="#2DD4BF"/>
+
+  <!-- Wordmark -->
+  <text x="78" y="42" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="29" letter-spacing="-0.3">
+    <tspan fill="#0F2A4A">TechStrategy</tspan><tspan fill="#2DD4BF">Lab</tspan>
+  </text>
+</svg>
