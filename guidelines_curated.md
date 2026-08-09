@@ -80,7 +80,8 @@ Website content should speak to all three segments without forcing a single pers
 
 ## 6. Brand Voice & Positioning
 
-- **Tone:** Approachable & conversational — first-person, feels like talking to a trusted advisor, not a stiff corporate consultancy.
+- **Tone:** Approachable & conversational — company voice ("we"), feels like talking to a trusted advisor, not a stiff corporate consultancy.
+- **Framing:** the site presents TechStrategyLab as a company/practice, not a personal-brand site for the founder. Carlos Ponce is credited as Founder & Principal Consultant in a dedicated "Leadership" section on the About page, but the rest of the site (Home, Services, Framework, Contact) speaks in first-person-plural ("we/our") throughout. No fictional team members are invented — TechStrategyLab is currently a solo consultancy, and the company voice reflects the practice as a whole rather than overstating headcount.
 - **Mindset/Values (from original guidelines):**
   - Pragmatic, no unnecessary paperwork or meetings without a plan
   - Direct communication with key stakeholders
